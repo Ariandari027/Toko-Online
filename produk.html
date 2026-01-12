@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AR fishsing - Produk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2 class="logo">AR fishsing</h2>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li class="active"><a href="produk.html">Produk</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+    </ul>
+  </nav>
+
+  <main class="page active">
+    <h1>Produk Kami</h1>
+
+    <div class="produk-list">
+
+      <div class="card">
+        <img src="rel.jpg" alt="Reel Daiwa" />
+        <h3>Reel Daiwa</h3>
+        <p>Rp 950.000</p>
+        <button class="buy-btn" onclick="openBuyPopup('Reel Daiwa')">🛒 BUY</button>
+      </div>
+
+      <div class="card">
+        <img src="jersey.jpg" alt="Jersey" />
+        <h3>Jersey</h3>
+        <p>Rp 300.000</p>
+        <button class="buy-btn" onclick="openBuyPopup('Jersey')">🛒 BUY</button>
+      </div>
+
+      <div class="card">
+        <img src="joran.jpg" alt="joran" />
+        <h3>joran</h3>
+        <p>Rp 1200.000</p>
+        <button class="buy-btn" onclick="openBuyPopup('joran')">🛒 BUY</button>
+      </div>
+
+      <div class="card">
+        <img src="lure.jpg" alt="lure casting" />
+        <h3>Lure</h3>
+        <p>Rp 500.000</p>
+        <button class="buy-btn" onclick="openBuyPopup('Lure casting')">🛒 BUY</button>
+      </div>
+
+      <div class="card">
+        <img src="simanoo.jpg" alt="Reel simanoo" />
+        <h3>Reel Simanoo</h3>
+        <p>Rp 5.110.000</p>
+        <button class="buy-btn" onclick="openBuyPopup('Reel Simanoo')">🛒 BUY</button>
+      </div>
+
+      <div class="card">
+        <img src="kili-kili.jpg" alt="Grip" />
+        <h3>Kili-Kili</h3>
+        <p>Rp 20.000</p>
+        <button class="buy-btn" onclick="openBuyPopup('Kili-Kili')">🛒 BUY</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL POPUP -->
+  <div class="modal" id="buyModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeBuyPopup()" aria-label="Tutup">✕</button>
+      <h3>Beli Produk</h3>
+      <p id="modalDesc">Kamu akan membeli produk ini.</p>
+
+      <div class="modal-actions">
+        <button class="btn secondary" onclick="closeBuyPopup()">Batal</button>
+        <a id="waOrderLink" class="btn" target="_blank" rel="noopener">Lanjut WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
